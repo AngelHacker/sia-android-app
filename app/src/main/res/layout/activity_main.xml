@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayoutA"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#50000000" />
+
+        <ImageButton
+            android:id="@+id/refreshChat"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@null"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chatRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/optionScroll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <!-- <include layout="@layout/issue_ticket_purchase" />-->
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnCamera"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginStart="7dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_camera_alt_white_48dp"
+                android:tint="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/chatBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7" />
+
+            <ImageButton
+                android:id="@+id/btnSpeak"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_mic_white_48dp"
+                android:tint="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
